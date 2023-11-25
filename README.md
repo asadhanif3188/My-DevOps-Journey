@@ -1,5 +1,13 @@
 # My DevOps Journey - Hard way 
 
+------------------
+## Outline
+
+[Linux Basics](#-linux-basics)
+
+
+------------------
+
 ## 1. Linux Basics
 
 ### 1.1 - Linux File System
