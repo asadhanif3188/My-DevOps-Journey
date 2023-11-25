@@ -32,6 +32,7 @@
 
 - pwd
 - ls 
+    - ls -R
 - tree 
 - cd 
 - man 
@@ -53,15 +54,44 @@
 - rm 
 - less 
 - cp 
+    - cp -r 
 - mv 
 - head 
 - tail 
+- reverse search (ctrl + r)
+- uname -a 
+- lscpu 
+- lsmem 
+- adduser 
 - 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+
+### 1.3 - Package Manager 
+
+**Software Package**
+
+A compressed archive, containing all required files.
+
+**Package Manager** 
+- Installs or update existing softwares from a repository. 
+- Ensure the integrity and authenticity of the package.
+- Manages and resolves all required dependencies.
+
+- List of few package managers:
+    - APT 
+    - SNAP 
+    - YUM 
+
+**Software Repositories**
+- It is a storage location, containing different programs. 
+- Package managers fetches the packages from these repositories. 
+- Always update the package index before upgrading or installing new packages. 
+
+- Update package index (sudo apt update)
+    - Pulls the latest changes from APT repositories.
+    - The APT package index is basically a database.
+    - Holding records of available packages from the repositories. 
+
+
+
+
+
