@@ -91,7 +91,10 @@ A compressed archive, containing all required files.
     - The APT package index is basically a database.
     - Holding records of available packages from the repositories. 
 
+- `/etc/apt/sources.list` file contains all the repositories of different packages.  
 
-
-
+**SNAP Package Manager**
+- **Snap**: A snap is a bundle of an app and its dependencies. 
+- **Snap Store** provides a place to upload snaps, and for users to brows and install the software.
+- **Snapcraft** is the command and framework used to build and publish snaps. 
 
