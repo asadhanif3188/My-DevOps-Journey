@@ -81,6 +81,7 @@
     - cat file1.txt file2.txt file3.txt
     - cat -n file1.txt
     - cat file1.txt file2.txt > combined.txt
+- tac   (cat in reverse) 
 - less 
 - more
 - head
@@ -112,13 +113,45 @@
     - wc -c myfile.txt  (chars count) (including white spaces)
     - wc -m myfile.txt  (chars count) (excluding white spaces)
     - wc myfile.txt  (count lines, words, chars)
+- uniq  (used to remove adjacent duplicate lines)
+- cut   (used to extract specific columns from lines of a file or input) 
+- split     (split a file into smaller parts)
+- sed   (stream editor) (used to find and replace strings)
+    - sed 's/old_txt/new_txt/g' file.txt
+    - sed 's/old_txt/new_txt/' file.txt
+    - sed -i 's/old_txt/new_txt/g' file.txt
+    - sed '/pattern/d' file.txt   (delete the line matching pattern)
+    - sed '3a\New line to append' file.txt   (append the text after line 3)
+    - sed '3i\New line to insert' file.txt   (insert the text before line 3)
+    - sed '2d' file.txt    (delete 2nd line)
+- grep
+    - grep -i "search_string" file.txt  (case insensitive)
+    - grep -c "search_string" file.txt  (count number of lines)
+    - grep -o "search_string" file.txt  (print only matched string)
+    - grep -n "search_string" file.txt  (print line number too)
+- find 
 
+**Misc. Commands**
 - reverse search (ctrl + r)
 - uname -a 
 - lscpu 
 - lsmem 
 - adduser 
 - 
+
+**Redirects and Pipes**
+- >
+- 2>
+- >>
+- 2>> 
+- sort file.txt > sorted.txt 2> error.txt
+- sort file.txt > sorted.txt 2>&1
+- | 
+    - cat file.txt | grep Apple 
+    - cat file.txt | grep -v a | sort -r    (get only lines that do not contain char 'a') 
+
+
+
 
 ### 1.3 - Package Manager 
 
