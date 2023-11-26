@@ -140,13 +140,13 @@
 - 
 
 **Redirects and Pipes**
-- >
+- 1>
 - 2>
-- >>
+- 1>>
 - 2>> 
 - sort file.txt > sorted.txt 2> error.txt
 - sort file.txt > sorted.txt 2>&1
-- | 
+- | (pipe)
     - cat file.txt | grep Apple 
     - cat file.txt | grep -v a | sort -r    (get only lines that do not contain char 'a') 
 
@@ -260,4 +260,28 @@ A compressed archive, containing all required files.
 - **Snap**: A snap is a bundle of an app and its dependencies. 
 - **Snap Store** provides a place to upload snaps, and for users to brows and install the software.
 - **Snapcraft** is the command and framework used to build and publish snaps. 
+
+### 1.4 - Secure Shell (SSH) 
+- Secure Shell (SSH) is a network protocol that provides a secure way to access a remote machine (server) over the Internet. 
+- It provides encrypted data communication. 
+- OpenSSH is a tool/utility/library used to perform remote login.
+
+**Ways to Authentication**
+1. Username & Password
+2. SSH Key Pair 
+
+**SSH Config File**
+- OpenSSH allows us to set up a per-user configuration file.
+- Where we can store different SSH options for each remote machine we connect to.
+- OpenSSH client-side configuration file is placed at `~/.ssh/config`.
+- This file must be readable and writable only by the user and not accessible by others.
+    - `sudo chmod 600 ~/.ssh/config`
+
+**SSH Config File Example**
+```
+Host my-website.com
+    HostName <ip-address-of-remote-server>
+    User <username>
+    IdentityFile ~/.ssh/id_rsa
+```
 
