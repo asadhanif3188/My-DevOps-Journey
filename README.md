@@ -388,3 +388,52 @@ do
 done
 ```
 
+**Functions**
+
+```
+#!/bin/bash
+
+function score_sum {
+
+ sum=0
+ while  true
+ do 
+  read -p "enter a score " score
+  if [ $score == "q" ] 
+  then 
+   break
+  fi
+  sum=$(($sum+$score))
+  echo "total score $sum"
+ done
+}
+
+function create_file() {
+ file_name=$1 
+ is_bash_script=$2
+ touch $file_name
+ echo "Creating $file_name file..."
+
+ if [ $is_bash_script = true ]
+ then
+  chmod u+x $file_name
+ fi
+}
+
+function sum() {
+ total=$(($1+$2))
+ return $total
+}
+
+#  ---------  Calling functions ------
+
+# score_sum
+create_file test.txt
+create_file dockerfile
+create_file new-script.sh true
+
+sum 4 8 
+result=$?
+echo "sum of 4 and 8 is $result"
+```
+
