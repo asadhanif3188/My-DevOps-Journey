@@ -30,6 +30,8 @@
 
 ### 1.2 - Basic Linux Commands 
 
+**Basic Commands** 
+
 - pwd
 - ls 
     - ls -R
@@ -46,18 +48,71 @@
 - shutdown 
 - alias 
 - unalias 
-- touch 
-- cat 
 - file
+
+**Navigating the Files System**
+- cd 
+    - cd ~
+    - cd -
+- ls 
+    - ls path/name
+    - ls -a 
+    - ls -l 
+    - ls -t 
+    - ls -S
+    - ls -r 
+    - ls -h
+
+**Manipulating Files and Directories** 
 - mkdir 
 - rmdir 
 - rm 
-- less 
 - cp 
     - cp -r 
 - mv 
-- head 
+    - mv -i
+    - mv -u
+
+**Working with Text Files**
+- touch
+    - touch file1.txt file2.txt file3.txt
+    - touch -t 202201011300
+- cat 
+    - cat file1.txt file2.txt file3.txt
+    - cat -n file1.txt
+    - cat file1.txt file2.txt > combined.txt
+- less 
+- more
+- head
+    - head -n 5 file.txt   
+    - head -c 100 file.txt
+    - head -f file.txt
+    - head -v file.txt
 - tail 
+    - tail -n 5 file.txt   
+    - tail -c 100 file.txt
+    - tail -f file.txt
+    - tail -v file.txt
+- sort 
+    - sort file.txt  (ascending order)
+    - sort -r file.txt  (descending order)
+    - sort -n file.txt  (sort numerically)
+    - sort -f file.txt  (sort as case-insensitive)
+    - sort -u file.txt  (remove any duplicate lines)
+    - sort -k 2 file.txt  (sort lines based on second column)
+- fold  (wrap lines to a specific width)
+    - fold file.txt  (default 80 chars)
+    - fold -w 60 file.txt
+    - fold -w 8 -s -n file.txt
+    - fold -w 40 file.txt > wrapped.txt 
+- comm 
+- wc 
+    - wc -l myfile.txt  (line count)
+    - wc -w myfile.txt  (word count)
+    - wc -c myfile.txt  (chars count) (including white spaces)
+    - wc -m myfile.txt  (chars count) (excluding white spaces)
+    - wc myfile.txt  (count lines, words, chars)
+
 - reverse search (ctrl + r)
 - uname -a 
 - lscpu 
