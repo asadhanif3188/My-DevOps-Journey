@@ -285,3 +285,106 @@ Host my-website.com
     IdentityFile ~/.ssh/id_rsa
 ```
 
+### 1.5 - Bash Scripting 
+
+**Shell:**
+- The program that interprets and executes the various commands that we type in the terminal.
+- Translates our command that the OS Kernel can understand. 
+
+**Different Shell Implementations**
+- `sh`: Bourne Shell, `/bin/sh`
+- `bash`: Bourne again Shell, `/bin/bash`
+    - improved version of sh
+    - default shell program for most UNIX like systems 
+- `zsh`: Z shell 
+
+**Configure a server**
+
+Create a file using nano or vim, `setup.sh`:
+
+```
+#!/bin/bash
+
+echo "Setup and configure server..."
+
+file_name=config.yaml
+
+config_dir=$1
+
+if [ -d "$config_dir" ]
+then
+        echo "Reading config directory contents.." 
+        config_files=$(ls $config_dir)
+else 
+        echo "Config dir not found.. creating one"
+        mkdir $config_dir
+        touch "$config_dir/file.txt"
+fi
+
+echo "Using file $file_name to configure k8s."
+
+echo "Here are all configuration files: $config_files"
+
+user_group=$2
+echo ""
+
+if [ $user_group == "asad" ]
+then 
+  echo "$user_group: Configure the server"
+elif [ $user_group == "admin" ]
+then 
+  echo "$user_group: you can also configure the server."
+else
+  echo "No permissions to configure the server"
+fi
+```
+
+Run the script as:
+```
+./setup.sh dir-name asad
+```
+
+**Reading input**
+
+```
+#!/bin/bash
+
+echo "Reading user input..."
+
+read -p "Please enter your password: " user_passwd 
+
+echo "You have entered $user_passwd"
+```
+
+**Parameters with Loop**
+
+```
+#!/bin/bash
+echo "All params: $*"
+echo "Number of params: $#"
+
+for param in $*
+do 
+
+  if [ -d $param ]
+  then 
+    echo "Executing scripts in the dir.."
+    ls -l $param
+  fi
+
+echo $param
+done
+
+sum=0
+while  true
+do 
+  read -p "enter a score " score
+  if [ $score == "q" ] 
+  then 
+   break
+  fi
+  sum=$(($sum+$score))
+  echo "total score $sum"
+done
+```
+
