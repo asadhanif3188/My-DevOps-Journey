@@ -197,7 +197,35 @@
 - sudo gpasswd -d username groupname   (removes the user from the specified group)
 - sudo deluser username groupname  (removes the user from the specified group while removing the user)
 - sudo userdel -G groupname username  (removes the user from the specified group while removing the user)
-- 
+
+**Ownership and Permissions**
+- sudo chown ali file.txt  (user only)
+- sudo chown :dev-team file.txt  (group only)
+- sudo chown ali:dev-team file.txt  (both)
+- sudo chown -R ali file.txt  (recursive for sub-dirs)
+- sudo chmod u+r file1
+- sudo chmod u+rw file1
+- sudo chmod u+rwx file1
+- sudo chmod u-r file1
+- sudo chmod u-rw file1
+- sudo chmod u-rwx file1
+- sudo chmod g+r file1
+- sudo chmod g+rw file1
+- sudo chmod g+rwx file1
+- sudo chmod g-r file1
+- sudo chmod g-rw file1
+- sudo chmod g-rwx file1
+- sudo chmod a+r file1
+- sudo chmod a+rw file1
+- sudo chmod a+rwx file1
+- sudo chmod a-r file1
+- sudo chmod a-rw file1
+- sudo chmod a-rwx file1
+- sudo chmod 777 file1
+- sudo chmod 555 file1
+- sudo chmod 660 file1
+- sudo chmod 750 file1
+
 
 
 ### 1.3 - Package Manager 
