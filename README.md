@@ -168,6 +168,36 @@
     - zip -r test.zip dir_name (recursively zip a directory)
 - unzip  (extract files into the current directory)
 
+**Accounts and Groups**
+- There four important files related to user accounts and groups:
+    - `/etc/passw`
+    - `/etc/shadow`
+    - `/etc/group`
+    - `/etc/gshadow`
+- useradd
+- adduser
+- userdel
+- deluser
+- usermod 
+- passwd
+- sudo usermod --lock username   (lock/disable user)
+- sudo passwd -l username   (lock/disable user)
+- sudo usermod --unlock username   (unlock/enable user)
+- sudo passwd -u username   (unlock/enable user)
+- groupadd
+- addgroup 
+- groupdel
+- delgroup
+- groupmod 
+- sudo usermod -aG groupname username   (Adding User to Group)
+- sudo gpasswd -a username groupname   (Adding User to Group)
+- sudo adduser username groupname   (Adding User to Group)
+- sudo useradd -G groupname username   (Adding User to Group)
+- sudo usermod -G "" username  (removes the user from all supplementary groups)
+- sudo gpasswd -d username groupname   (removes the user from the specified group)
+- sudo deluser username groupname  (removes the user from the specified group while removing the user)
+- sudo userdel -G groupname username  (removes the user from the specified group while removing the user)
+- 
 
 
 ### 1.3 - Package Manager 
