@@ -150,6 +150,23 @@
     - cat file.txt | grep Apple 
     - cat file.txt | grep -v a | sort -r    (get only lines that do not contain char 'a') 
 
+**Compression**
+- gzip  (compress)
+- gunzip  (decompress)
+- bzip2  (compress)
+- bunzip2  (decompress)
+
+**Archive**
+- tar
+    - tar -cf test.tar file1 file2   (create tar with specified name)
+    - tar -tf test.tar  (see contents of tar file)
+    - tar -xf test.tar  (extract the contents of tarball) 
+    - tar -czf test.tar.gz file1 file2  (compress the file with gzip) 
+    - tar -cjf test.tar.gz2 (compress the file with bzip2)
+    - tar -cjpf test.tar.gz2 (compress the file with bzip2 and preserve the permissions)
+- zip 
+    - zip -r test.zip dir_name (recursively zip a directory)
+- unzip  (extract files into the current directory)
 
 
 
